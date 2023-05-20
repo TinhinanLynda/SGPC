@@ -51,31 +51,29 @@
 			  		</div>
 			  	</div>
 			  	<hr>
-			    <div class="container">
-			    	<div class="row align-items-center justify-content-between d-flex">
-				      <div id="logo">
-				        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
-				      </div>
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="index.html">Home</a></li>
-				          <li><a href="about.html">About</a></li>
-				          <li><a href="gallery.html">Gallery</a></li>
-				          <li><a href="event.html">Events</a></li>
-				          <li><a href="ticket.html">Ticket</a></li>
-				          <li><a href="blog-home.html">Blog</a></li>
-				          <li><a href="contact.html">Contact</a></li>
-				          <li class="menu-has-children"><a href="">Pages</a>
-				            <ul>
-				              <li><a href="blog-single.html">Blog Single</a></li>
-				              <li><a href="category.html">Category</a></li>
-				              <li><a href="elements.html">Elements</a></li>
-				            </ul>
-				          </li>			          
-				        </ul>
-				      </nav><!-- #nav-menu-container -->		    		
-			    	</div>
-			    </div>
+				<div class="container">
+					<div class="row align-items-center justify-content-between d-flex">
+						<div id="logo">
+							<a href="index.html"><img src="img/SPGC.png" alt="" title="" style="height: 80px;" /></a>
+						</div>
+						<nav id="nav-menu-container">
+							<ul class="nav-menu">
+								<li class="menu-active"><a href="index.html">Home</a></li>
+				
+								<li><a href="event.html">Liste des monuments</a></li>
+								<li class="menu-has-children"><a href="">Nos Services</a>
+									<ul>
+										<li><a href="blog-single.html">Design des Façades"</a></li>
+										<li><a href="category.html">Design Cinématographique</a></li>
+									</ul>
+								</li>
+								<li><a href="about.html">À propos de nous</a></li>
+								<li><a href="contact.html">Contactez-nous</a></li>
+				
+							</ul>
+						</nav><!-- #nav-menu-container -->
+					</div>
+				</div>
 			  </header><!-- #header -->
 
 			<!-- start banner Area -->
@@ -85,191 +83,156 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Buy Tickets
+								Palais Al-Machwar
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="ticket.html"> Tickets</a></p>
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span> <a href="event.html"> Liste des monuments</a><span class="lnr lnr-arrow-right"></span> <a href="event.html">Palais Al-Machwar</a></p>
 						</div>											
 					</div>
 				</div>
 			</section>
 			<!-- End banner Area -->	
+ 
+			<!-- Start quote Area -->
+			<section class="quote-area section-gap" style="padding-bottom: 0;">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 quote-left">
+							<!-- <h1>
+								<span>Music</span> gives soul to the universe, <br>
+								wings to the <span>mind</span>, flight <br>
+								to the <span>imagination</span>.
+							</h1> -->
+							<div   id="scene-container" style="height: 500px; border-radius: 12px;"></div>
+							
+							<script>
+								// Obtenir une référence vers le conteneur de la scène
+								const sceneContainer = document.getElementById('scene-container');
 
+								// Créer l'élément iframe
+								const iframe = document.createElement('iframe');
 
-			<!-- Start upcoming-exibition Area -->
-			<section class="upcoming-exibition-area section-gap">
+								// Définir les attributs de l'iframe
+								iframe.src = 'scene.html'; // Chemin vers votre fichier scene.html
+								iframe.style.width = '100%';
+								iframe.style.height = '100%';
+								iframe.style.border = '2px solid #eee';
+								iframe.style.borderRadius='6px'
+
+								// Ajouter l'iframe au conteneur de la scène
+								sceneContainer.appendChild(iframe);
+							</script>
+						</div>
+						<div class="col-lg-6 quote-right">
+							 <h4 style="margin-bottom: 12px;">Palais Al-Machwar</h4>
+							<p>
+								Le Palais Al-Machwar est un grand édifice construit par le sultan Yagmorassen ben Ziayan dans le sud de Tlemcan. Il a
+								été transformé en résidence par une famille à la place de l'ancien palais et fortifié pour devenir une ville
+								indépendante au cœur de la capitale ziyanide.
+								</p><p>
+								Cet édifice existe toujours aujourd'hui, avec ses imposants murs, sa porte intérieure connue sous le nom de Porte de la
+								Machwar, et sa porte extérieure connue sous le nom de Porte de la Twitta. Cependant, les élégantes demeures, les jardins
+								exquis et les fontaines d'eau, qui étaient autrefois si beaux et gracieux, ont été effacés par le passage du temps.
+								</p><p> 
+								Seule la mosquée construite par le sultan Abou Homo Musa Ier, rénovée par les Turcs et convertie en église par les
+								autorités françaises, a perdu toute sa décoration ancienne et ne possède plus d'œuvres d'art intéressantes, à
+								l'exception de son minaret qui conserve encore une partie de sa décoration antique, en particulier sur la façade sud.
+							</p> 
+								<div style="display: flex;justify-content: flex-end; margin-top: 60px;">
+									<a href="#" class="primary-btn text-uppercase"> 100 DA  </a>
+								</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			<!-- End quote Area -->
+
+			<!-- Start exibition Area -->
+			<section class="quote-area section-gap" id="exhibitions" style="padding: 50px 0;">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-70 col-lg-8">
+						<div class="menu-content pb-60 col-lg-10">
 							<div class="title text-center">
-								<h1 class="mb-10">Ongoing Exhibitions from the scratch</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
+								<h1 class="mb-10">Galerie de photos</h1>
+								<p>Explorez la beauté architecturale et l'héritage historique de ce monument à travers une sélection de photos captivantes.</p>
 							</div>
 						</div>
-					</div>						
-					<div class="row">
-						<div class="col-lg-4 col-md-6 single-exhibition">
-							<div class="thumb">
-								<img class="img-fluid" src="img/pages/ex1.jpg" alt="">						
-							</div>
-							<p class="date">10 Jan 2018</p>
-							<a href="#"><h4>Blind Artist Draws Colorful Paintings</h4></a>
-							<p>
-								Lorem ipsum dolor sit amet, consec teturadip isicing elit, sed do eiusmod tempor.
-							</p>
-							<div class="meta-bottom d-flex justify-content-start">
-								<p class="price">$45.00</p>
-							</div>									
-						</div>
-						<div class="col-lg-4 col-md-6 single-exhibition">
-							<div class="thumb">
-								<img class="img-fluid" src="img/pages/ex2.jpg" alt="">						
-							</div>
-							<p class="date">10 Jan 2018</p>
-							<a href="#"><h4>Blind Artist Draws Colorful Paintings</h4></a>
-							<p>
-								Lorem ipsum dolor sit amet, consec teturadip isicing elit, sed do eiusmod tempor.
-							</p>
-							<div class="meta-bottom d-flex justify-content-start">
-								<p class="price">$45.00</p>
-							</div>									
-						</div>
-						<div class="col-lg-4 col-md-6 single-exhibition">
-							<div class="thumb">
-								<img class="img-fluid" src="img/pages/ex3.jpg" alt="">						
-							</div>
-							<p class="date">10 Jan 2018</p>
-							<a href="#"><h4>Blind Artist Draws Colorful Paintings</h4></a>
-							<p>
-								Lorem ipsum dolor sit amet, consec teturadip isicing elit, sed do eiusmod tempor.
-							</p>
-							<div class="meta-bottom d-flex justify-content-start">
-								<p class="price">$45.00</p>
-							</div>									
-						</div>	
-						<div class="col-lg-4 col-md-6 single-exhibition">
-							<div class="thumb">
-								<img class="img-fluid" src="img/pages/ex4.jpg" alt="">						
-							</div>
-							<p class="date">10 Jan 2018</p>
-							<a href="#"><h4>Blind Artist Draws Colorful Paintings</h4></a>
-							<p>
-								Lorem ipsum dolor sit amet, consec teturadip isicing elit, sed do eiusmod tempor.
-							</p>
-							<div class="meta-bottom d-flex justify-content-start">
-								<p class="price">$45.00</p>
-							</div>									
-						</div>
-						<div class="col-lg-4 col-md-6 single-exhibition">
-							<div class="thumb">
-								<img class="img-fluid" src="img/pages/ex5.jpg" alt="">						
-							</div>
-							<p class="date">10 Jan 2018</p>
-							<a href="#"><h4>Blind Artist Draws Colorful Paintings</h4></a>
-							<p>
-								Lorem ipsum dolor sit amet, consec teturadip isicing elit, sed do eiusmod tempor.
-							</p>
-							<div class="meta-bottom d-flex justify-content-start">
-								<p class="price">$45.00</p>
-							</div>									
-						</div>
-						<div class="col-lg-4 col-md-6 single-exhibition">
-							<div class="thumb">
-								<img class="img-fluid" src="img/pages/ex6.jpg" alt="">						
-							</div>
-							<p class="date">10 Jan 2018</p>
-							<a href="#"><h4>Blind Artist Draws Colorful Paintings</h4></a>
-							<p>
-								Lorem ipsum dolor sit amet, consec teturadip isicing elit, sed do eiusmod tempor.
-							</p>
-							<div class="meta-bottom d-flex justify-content-start">
-								<p class="price">$45.00</p>
-							</div>									
-						</div>																	
 					</div>
-				</div>	
+					<div class="row">
+						<div class="active-exibition-carusel">
+							<div class="single-exibition item">
+								<img src="img/mechewar/421937f19b06f52db1e51bdde12534ff.jpg" alt="">
+								 
+							</div>
+			
+							<div class="single-exibition item">
+								<img src="img/mechewar/4546aed382ac17caf6f35a080f02bc31.jpg" alt="">
+								 
+							</div>
+			
+							<div class="single-exibition item">
+								<img src="img/mechewar/81c81baa04ec286acfd79e8c1c80dc49.jpg" alt="">
+								 
+							</div>
+							<div class="single-exibition item">
+								<img src="img/mechewar/93fdca8218983c2e5127bcf13cd78327.jpg" alt="">
+							 
+							</div>
+			
+							<div class="single-exibition item">
+								<img src="img/mechewar/9a86db6a8c5b76cc6eb4c96e357f0186.jpg" alt="">
+								 
+							</div>
+			
+							<div class="single-exibition item">
+								<img src="img/mechewar/ad19408da8ba80488891c4a1d30e3bd6.jpg" alt="">
+								 
+							</div>
+							<div class="single-exibition item">
+								<img src="img/mechewar/bf7ccf80e922395b00651b4329aee71a.jpg" alt="">
+								 
+							</div>
+			
+							<div class="single-exibition item">
+								<img class="img-fluid" src="img/mechewar/Screenshot_20230516-023856_Maps.jpg" alt="">
+								 
+							</div>
+			
+							<div class="single-exibition item">
+								<img class="img-fluid" src="img/mechewar/Screenshot_20230516-023720_Maps.jpg" alt="">
+								 
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
-			<!-- End upcoming-exibition Area -->
+			<!-- End exibition Area -->
 			
-			
-			<!-- Start blog Area -->
-			<section class="blog-area section-gap" id="blog">
+			<!-- Start contact-page Area -->
+			<section class="quote-area section-gap" style="padding-top: 0;">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-70 col-lg-8">
+						<div class="menu-content pb-60 col-lg-10">
 							<div class="title text-center">
-								<h1 class="mb-10">Latest From Our Blog</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
+								<h1 class="mb-10">Localisation du Monument</h1>
+								<p>Découvrez l'emplacement précis du monument historique au cœur de la ville.</p>
 							</div>
 						</div>
-					</div>					
-					<div class="row">
-						<div class="col-lg-3 col-md-6 single-blog">
-							<div class="thumb">
-								<img class="img-fluid" src="img/b1.jpg" alt="">								
-							</div>
-							<p class="date">10 Jan 2018</p>
-							<a href="#"><h4>Addiction When Gambling
-							Becomes A Problem</h4></a>
-							<p>
-								inappropriate behavior ipsum dolor sit amet, consectetur.
-							</p>
-							<div class="meta-bottom d-flex justify-content-between">
-								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-							</div>									
-						</div>
-						<div class="col-lg-3 col-md-6 single-blog">
-							<div class="thumb">
-								<img class="img-fluid" src="img/b2.jpg" alt="">								
-							</div>
-							<p class="date">10 Jan 2018</p>
-							<a href="#"><h4>Addiction When Gambling
-							Becomes A Problem</h4></a>
-							<p>
-								inappropriate behavior ipsum dolor sit amet, consectetur.
-							</p>
-							<div class="meta-bottom d-flex justify-content-between">
-								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-							</div>									
-						</div>
-						<div class="col-lg-3 col-md-6 single-blog">
-							<div class="thumb">
-								<img class="img-fluid" src="img/b3.jpg" alt="">								
-							</div>
-							<p class="date">10 Jan 2018</p>
-							<a href="#"><h4>Addiction When Gambling
-							Becomes A Problem</h4></a>
-							<p>
-								inappropriate behavior ipsum dolor sit amet, consectetur.
-							</p>
-							<div class="meta-bottom d-flex justify-content-between">
-								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-							</div>									
-						</div>
-						<div class="col-lg-3 col-md-6 single-blog">
-							<div class="thumb">
-								<img class="img-fluid" src="img/b4.jpg" alt="">								
-							</div>
-							<p class="date">10 Jan 2018</p>
-							<a href="#"><h4>Addiction When Gambling
-							Becomes A Problem</h4></a>
-							<p>
-								inappropriate behavior ipsum dolor sit amet, consectetur.
-							</p>
-							<div class="meta-bottom d-flex justify-content-between">
-								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-							</div>									
-						</div>							
 					</div>
-				</div>	
+					<div class="row">
+						<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
+						 
+					 
+					</div>
+				</div>
 			</section>
-			<!-- End blog Area -->
+			<!-- End contact-page Area -->
+
+			
+		 
 
 			<!-- start footer Area -->		
-			<footer class="footer-area section-gap">
+			<footer class="  exibition-area section-gap">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-5 col-md-6 col-sm-6">
