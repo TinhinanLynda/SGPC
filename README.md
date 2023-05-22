@@ -7,30 +7,22 @@ This repository contains the source code and documentation for the Societe de Ge
 
 ## Installation
 1. Clone the repository:
- git clone https://github.com/your-username/societe-de-gestion-du-patrimoine-culturel.git
-
+ git clone (https://github.com/TinhinanLynda/SGPC.git)
 2. Navigate to the project directory:
-cd societe-de-gestion-du-patrimoine-culturel
+cd SGPC
 
 3. Install the dependencies:
 npm install
 
-4. Set up the database:
-- [Provide instructions on how to set up and configure the database]
-
 5. Configure the project:
-- [Provide instructions on how to configure any necessary project settings]
+- ![image](https://github.com/TinhinanLynda/SGPC/assets/40517692/c1e49d51-cf47-4ad4-bb3d-1f55c8f741b6)
+
 
 ## Usage
 1. Start the application:
  node server.js
 
 2. Open your web browser and visit [http://localhost:3000](http://localhost:3000) to access the application.
-
-3. [Provide instructions on how to use the application and its main features]
-
-## Features
-- [List the main features and functionalities of the project]
 
 ## Dependencies
 - [List the main dependencies and versions required for the project]
@@ -45,7 +37,7 @@ Thank you for considering contributing to the Societe de Gestion du Patrimoine C
 This project is licensed under the [Insert License Name] License. See the [LICENSE](LICENSE) file for more information.
 
 ## Author
-- [Your Name](https://github.com/your-username)
+- [TinhinanLynda](https://github.com/TinhinanLynda)
 
 ## Acknowledgments
 - [Mention any individuals, resources, or projects you want to acknowledge]
