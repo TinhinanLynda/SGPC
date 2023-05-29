@@ -1,91 +1,138 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Scene 3D avec HDRI et éclairage</title>
     <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-    </style>
-</head>
+      body {
+        margin: 0;
+        overflow: hidden;
+        position: relative; /* Add this to make the loading overlay work */
+      }
 
-<body>
+      #loading-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        z-index: 9999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loading-overlay">
+      <span>Loading...</span>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/RGBELoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
 
     <script>
-        // Configuration de la scène 3D
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(
-          75,
-            window.innerWidth / window.innerHeight,
-            0.1,
-            1000
-        );
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
+      function hideLoadingOverlay() {
+        const loadingOverlay = document.getElementById("loading-overlay");
+        loadingOverlay.style.display = "none";
+      }
+      // Configuration de la scène 3D
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
 
-        // Chargement du HDRI
-        const loader = new THREE.RGBELoader();
-        loader.setDataType(THREE.UnsignedByteType);
-        loader.load('hdri/hdri.hdr', (texture) => {
-            // Créez une sphère pour représenter le HDRI
-            const hdriGeometry = new THREE.SphereGeometry(100, 64, 32);
-            const hdriMaterial = new THREE.MeshStandardMaterial({ envMap: texture, side: THREE.BackSide });
+      // Chargement du HDRI
+      const loader = new THREE.RGBELoader();
+      loader.setDataType(THREE.UnsignedByteType);
+      loader.load(
+        "hdri/hdri.hdr",
+        (texture) => {
+          // Créez une sphère pour représenter le HDRI
+          const hdriGeometry = new THREE.SphereGeometry(100, 64, 32);
+          const hdriMaterial = new THREE.MeshStandardMaterial({
+            envMap: texture,
+            side: THREE.BackSide,
+          });
 
-            const hdriMesh = new THREE.Mesh(hdriGeometry, hdriMaterial);
-            scene.add(hdriMesh);
+          const hdriMesh = new THREE.Mesh(hdriGeometry, hdriMaterial);
+          scene.add(hdriMesh);
 
-            // Chargement de l'objet 3D
-            const gltfLoader = new THREE.GLTFLoader();
-            const modelPath = "models/aaa.glb";
-            gltfLoader.load(modelPath, (gltf) => {
-                const model = gltf.scene;
-                scene.add(model);
+          // Chargement de l'objet 3D
+          const gltfLoader = new THREE.GLTFLoader();
+          const modelPath = "models/aaa.glb";
+          gltfLoader.load(
+            modelPath,
+            (gltf) => {
+              const model = gltf.scene;
+              scene.add(model);
 
-                // Position de la caméra pour visualiser l'objet
-                camera.position.z = 2;
-                    camera.position.y= 1;
-                // camera.position.y = -2;
-                // Ajout d'une lumière ambiante
-                const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-                scene.add(ambientLight);
+              // Position de la caméra pour visualiser l'objet
+              camera.position.z = 2;
+              camera.position.y = 1;
+              // camera.position.y = -2;
+              // Ajout d'une lumière ambiante
+              const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+              scene.add(ambientLight);
 
-                // Ajout d'une lumière directionnelle
-                const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-                directionalLight.position.set(1, 1, 1);
-                scene.add(directionalLight);
+              // Ajout d'une lumière directionnelle
+              const directionalLight = new THREE.DirectionalLight(
+                0xffffff,
+                0.5
+              );
+              directionalLight.position.set(1, 1, 1);
+              scene.add(directionalLight);
 
-                // Ajout des contrôles OrbitControls
-                const controls = new THREE.OrbitControls(camera, renderer.domElement);
+              // Ajout des contrôles OrbitControls
+              const controls = new THREE.OrbitControls(
+                camera,
+                renderer.domElement
+              );
 
-                // Fonction d'animation
-                const animate = function () {
-                    requestAnimationFrame(animate);
+              // Fonction d'animation
+              const animate = function () {
+                requestAnimationFrame(animate);
 
-                    // Rotation de l'objet 3D
-                    // model.rotation.y += 0.01;
+                // Rotation de l'objet 3D
+                // model.rotation.y += 0.01;
 
-                    // Mise à jour des contrôles
-                    controls.update();
+                // Mise à jour des contrôles
+                controls.update();
 
-                    renderer.render(scene, camera);
-                };
+                renderer.render(scene, camera);
+              };
 
-                animate();
-            }, undefined, (error) => {
-                console.error("Une erreur s'est produite lors du chargement du modèle 3D :", error);
-            });
-        }, undefined, (error) => {
-            console.error("Une erreur s'est produite lors du chargement du HDRI :", error);
-        });
+              animate();
+              hideLoadingOverlay();
+            },
+            undefined,
+            (error) => {
+              console.error(
+                "Une erreur s'est produite lors du chargement du modèle 3D :",
+                error
+              );
+            }
+          );
+        },
+        undefined,
+        (error) => {
+          console.error(
+            "Une erreur s'est produite lors du chargement du HDRI :",
+            error
+          );
+        }
+      );
     </script>
-</body>
-
+  </body>
 </html>
